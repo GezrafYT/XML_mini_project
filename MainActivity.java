@@ -1,10 +1,13 @@
 package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.core.view.ViewCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.WindowInsetsCompat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +17,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void getMessage(View view) {
-        Toast.makeText(this, "לחצת על הכפתור!", Toast.LENGTH_SHORT).show(); // pops up a message as a response to clicking the button
+    public void popMessage(View view) {
+        //להקפיץ הודעה
+        Toast.makeText(this, "לחצת על הכפתור!", Toast.LENGTH_SHORT).show();
+    }
+    
+    public void changeButtonColor(View view)
+    {
+        
     }
 }
