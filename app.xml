@@ -19,7 +19,7 @@
         android:layout_height="56dp" /> !-- size in pixels (dp)
 
     <Button
-        android:onClick="getMessage" !-- button click event
+        android:onClick="getMessage" !-- button click event, activates the getMessage() function in MainActivity.java
         android:text="לחץ לקבלת הודעה" !-- button text display
         android:layout_width="200dp" !-- button text width
         android:layout_height="65dp"></Button> !-- button text height
