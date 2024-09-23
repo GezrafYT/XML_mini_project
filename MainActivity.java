@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import java.util.Random;
 
 
@@ -61,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void quitApp(View view)
     {
-        finishAffinity();
         System.exit(0);
     }
 }
