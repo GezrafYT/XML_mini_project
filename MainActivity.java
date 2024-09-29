@@ -1,69 +1,22 @@
-package com.example.my_app; // replace with your package name
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
-import android.widget.Button;
-
-import java.util.Random;
-
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.gez);
-    }
-
-    public void popMessage(View view) {
-        Toast.makeText(this, "Message Popped 😎", Toast.LENGTH_SHORT).show();
-    }
-
-    public void changeButtonColor(View view)
-    {
-        Button button = (Button) view;
-        Random rand = new Random();
-        int R = rand.nextInt(255);
-        int G = rand.nextInt(255);
-        int B = rand.nextInt(255);
-        button.setBackgroundColor(Color.rgb(R, G, B));
-    }
-
-    public void changeTextColor(View view)
-    {
-        Button button = (Button) view;
-        Random rand = new Random();
-        int R = rand.nextInt(255);
-        int G = rand.nextInt(255);
-        int B = rand.nextInt(255);
-        button.setTextColor(Color.rgb(R, G, B));
-    }
-
-    int currentIndex = 0;
-    public void changeBackground(View view) {
-        View layout = findViewById(R.id.mainLayout);
-
-        int[] bg_arr = {
-                R.drawable.galaxy1,
-                R.drawable.galaxy2,
-                R.drawable.galaxy3,
-                R.drawable.galaxy4
-        };
-
-        Random rand = new Random();
-        layout.setBackgroundResource(bg_arr[currentIndex]);
-
-        currentIndex = (currentIndex + 1) % bg_arr.length;
-    }
+    <TextView
+        android:layout_width="399dp"
+        android:layout_height="63dp"
+        android:gravity="center"
+        android:text="im black"
+        android:textColor="#000000"
+        android:textSize="35sp" />
 
 
-    public void quitApp(View view)
-    {
-        System.exit(0);
-    }
-}
+</LinearLayout>
