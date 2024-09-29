@@ -13,11 +13,11 @@
     
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_height="70sp"
         android:text="Guy's App"
         android:textColor="#FFC500"
-        android:layout_marginBottom="10dp"
-        android:textSize="35dp" />
+        android:layout_marginBottom="10sp"
+        android:textSize="35sp" />
 
 
     <Button
@@ -27,38 +27,38 @@
         android:backgroundTint="#6930ED"
         android:onClick="changeButtonColor"
         android:text="Change Button Color"
-        android:textSize="20dp"
-        android:layout_marginTop="0dp"></Button>
+        android:textSize="20sp"
+        android:layout_marginTop="0sp"></Button>
 
     <Button
         android:id="@+id/changeTextColor"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
+        android:layout_width="200sp"
+        android:layout_height="70sp"
         android:backgroundTint="#1178FF"
         android:onClick="changeTextColor"
         android:text="Change Text Color"
-        android:textSize="20dp"
-        android:layout_marginTop="80dp"></Button>
+        android:textSize="20sp"
+        android:layout_marginTop="80sp"></Button>
 
     <Button
         android:id="@+id/changeBG"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
+        android:layout_width="200sp"
+        android:layout_height="70sp"
         android:backgroundTint="#EDAB30"
         android:onClick="changeBackground"
         android:text="Change Background"
-        android:textSize="20dp"
-        android:layout_marginTop="80dp"></Button>
+        android:textSize="20sp"
+        android:layout_marginTop="80sp"></Button>
 
     <Button
         android:id="@+id/quit"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
+        android:layout_width="130sp"
+        android:layout_height="50sp"
         android:backgroundTint="#ED3030"
         android:onClick="quitApp"
         android:text="Quit"
-        android:textSize="20dp"
-        android:layout_marginTop="60dp"></Button>
+        android:textSize="20sp"
+        android:layout_marginTop="60sp"></Button>
 
 
 </LinearLayout>
