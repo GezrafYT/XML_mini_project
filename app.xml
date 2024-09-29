@@ -69,8 +69,8 @@
         android:onClick="moveToScreen"
         android:text="🤫"
         android:textSize="18sp"
-        android:layout_marginRight="150dp"
-        android:layout_marginTop="110dp"
+        android:translationX="-160dp"
+        android:translationY="60dp"
         ></Button>
 
 </LinearLayout>
