@@ -25,7 +25,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         hideSystemUI();
-        final View layout = findViewById(R.id.mainLayout);
+        final View layout = findViewById(R.id.mainLayout2);
         final int[] jeffArr = {R.drawable.jeff1, R.drawable.jeff2};
         final int delay = 80;
 
@@ -50,21 +50,6 @@ public class MainActivity2 extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
     }
 
-//    public void loopJeff(View view) {
-//        final View layout = findViewById(R.id.mainLayout);
-//        final int[] jeffArr = {R.drawable.jeff1, R.drawable.jeff2};
-//        final int delay = 80;
-//
-//        layout.post(new Runnable() {
-//            int currentIndex = 0;
-//
-//            @Override
-//            public void run() {
-//                layout.setBackgroundResource(jeffArr[currentIndex]);
-//                currentIndex = (currentIndex + 1) % jeffArr.length;
-//                layout.postDelayed(this, delay);
-//            }
-//        });
-//    }
+
 
 }
