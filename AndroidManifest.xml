@@ -22,8 +22,14 @@
             </intent-filter>
         </activity>
 
+
         <activity
             android:name=".MainActivity2"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".jeff_screen"
             android:exported="true">
         </activity>
 
