@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.Button;
@@ -57,9 +56,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
         Random rand = new Random();
-        layout.setBackgroundResource(bg_arr[currentIndex]);
-
         currentIndex = (currentIndex + 1) % bg_arr.length;
+        layout.setBackgroundResource(bg_arr[currentIndex]);
     }
 
 
@@ -70,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void moveToScreen(View view)
     {
-        Intent i1 = new Intent(this, MainActivity2.class);
+        Intent i1 = new Intent(this, jeff_screen.class);
         startActivity(i1);
     }
 }
