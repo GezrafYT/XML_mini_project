@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.Button;
@@ -14,10 +16,13 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    int clickCount = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app);
+        hideSystemUI();
     }
 
     public void popMessage(View view) {
@@ -48,16 +53,36 @@ public class MainActivity extends AppCompatActivity {
     public void changeBackground(View view) {
         View layout = findViewById(R.id.mainLayout);
 
-        int[] bg_arr = {
-                R.drawable.galaxy1,
-                R.drawable.galaxy2,
-                R.drawable.galaxy3,
-                R.drawable.galaxy4
+        TransitionDrawable[] transitions = new TransitionDrawable[] {
+                (TransitionDrawable) getResources().getDrawable(R.drawable.tr1),
+                (TransitionDrawable) getResources().getDrawable(R.drawable.tr2),
+                (TransitionDrawable) getResources().getDrawable(R.drawable.tr3),
+                (TransitionDrawable) getResources().getDrawable(R.drawable.tr4)
         };
 
-        Random rand = new Random();
-        currentIndex = (currentIndex + 1) % bg_arr.length;
-        layout.setBackgroundResource(bg_arr[currentIndex]);
+        layout.setBackground(transitions[currentIndex]);
+        transitions[currentIndex].startTransition(800);
+
+        currentIndex = (currentIndex + 1) % transitions.length;
+    }
+
+    public void hideSystemUI() {
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
+    }
+
+    public void moveToScreen(View view)
+    {
+        clickCount++;
+
+        if(clickCount == 3)
+        {
+            Intent i1 = new Intent(this, jeff_screen.class);
+            startActivity(i1);
+        }
     }
 
 
@@ -66,9 +91,4 @@ public class MainActivity extends AppCompatActivity {
         System.exit(0);
     }
 
-    public void moveToScreen(View view)
-    {
-        Intent i1 = new Intent(this, jeff_screen.class);
-        startActivity(i1);
-    }
 }
