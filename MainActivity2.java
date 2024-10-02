@@ -19,26 +19,10 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app2);
 
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.jeff_sound);
-
-        mediaPlayer.start();
-
 
         hideSystemUI();
         final View layout = findViewById(R.id.mainLayout2);
-        final int[] jeffArr = {R.drawable.jeff1, R.drawable.jeff2};
-        final int delay = 80;
 
-        layout.post(new Runnable() {
-            int currentIndex = 0;
-
-            @Override
-            public void run() {
-                layout.setBackgroundResource(jeffArr[currentIndex]);
-                currentIndex = (currentIndex + 1) % jeffArr.length;
-                layout.postDelayed(this, delay);
-            }
-        });
     }
 
 
