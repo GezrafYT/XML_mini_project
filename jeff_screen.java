@@ -26,7 +26,6 @@ public class jeff_screen extends AppCompatActivity {
 
         layout.post(new Runnable() {
             int currentIndex = 0;
-
             @Override
             public void run() {
                 layout.setBackgroundResource(jeffArr[currentIndex]);
